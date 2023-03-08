@@ -1,0 +1,52 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %}
+{% block content %}
+<h2>Experiments</h2>
+
+<p>
+    <a href="{% url 'upload_exp' %}" class="btn btn-primary">Create Experiment</a>
+</p>
+<table class = "table mb-0">
+    <thead>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Owner</th>
+            <th>Download</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for exp in ex %}
+        <tr>
+            <td>
+                {% if exp.cover %}
+                <img src="{{ exp.cover.url }}" alt="{{ exp.title }}" width="100px">
+                {% else %}
+                <span class = "text-muted">No Cover</span>
+                {% endif %}
+            <td>{{ exp.title }}</td>
+            <td>{{ exp.owner }}</td>
+            <td>
+                <a href="{{ exp.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">Download</a>
+            </td>
+            <td>
+                <form method = "post" action = "{% url 'delete_exp' exp.pk %}">
+                    {% csrf_token %}
+                    <button type = "submit" class = "btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+
+
+
+
+
+
+
+

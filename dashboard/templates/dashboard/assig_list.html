@@ -1,0 +1,52 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %}
+{% block content %}
+<h2>Assignments</h2>
+
+<p>
+    <a href="{% url 'upload_assig' %}" class="btn btn-primary">Create Assignment</a>
+</p>
+<table class = "table mb-0">
+    <thead>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Owner</th>
+            <th>Download</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for assign in assig %}
+        <tr>
+            <td>
+                {% if assign.cover %}
+                <img src="{{ assign.cover.url }}" alt="{{ assign.title }}" width="100px">
+                {% else %}
+                <span class = "text-muted">No Cover</span>
+                {% endif %}
+            <td>{{ assign.title }}</td>
+            <td>{{ assign.owner }}</td>
+            <td>
+                <a href="{{ assign.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">Download</a>
+            </td>
+            <td>
+                <form method = "post" action = "{% url 'delete_assign' assign.pk %}">
+                    {% csrf_token %}
+                    <button type = "submit" class = "btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
