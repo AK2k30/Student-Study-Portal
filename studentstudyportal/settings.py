@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t*j%5ct68cou#7=l61fkdz=x7dgo9sikg3c20jq%lc!gn!k!+5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['notesplus.azurewebsites.net','127.0.0.1']
 
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['notesplus.azurewebsites.net','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -150,5 +152,6 @@ AZURE_ACCOUNT_NAME = 'notesplusstorage'
 AZURE_ACCOUNT_KEY = 'ReX2oIpu7uoz+wAkcVN3R11ucK0Q0aHvjxjVSfiytqBaSUyIh+lD5OyJ8dD3rq8y4Pr6AzLi6nkD+AStdnSE8w=='
 AZURE_CONTAINER = 'notesplusss'
 
+CORS_ALLOWED_ORIGINS = ['https://notesplus.azurewebsites.net']
 
 
