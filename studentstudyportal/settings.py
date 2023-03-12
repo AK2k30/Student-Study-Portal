@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -152,6 +152,6 @@ AZURE_ACCOUNT_NAME = 'notesplusstorage'
 AZURE_ACCOUNT_KEY = 'ReX2oIpu7uoz+wAkcVN3R11ucK0Q0aHvjxjVSfiytqBaSUyIh+lD5OyJ8dD3rq8y4Pr6AzLi6nkD+AStdnSE8w=='
 AZURE_CONTAINER = 'notesplusss'
 
-CORS_ALLOWED_ORIGINS = ['*']
+# CORS_ALLOWED_ORIGINS = ['*']
 
 
