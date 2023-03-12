@@ -53,7 +53,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="http://127.0.0.1:8000/">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'homepage' %}">Home</a></li>
           <li><a class="nav-link scrollto" href="http://127.0.0.1:8000/assg_page">About</a></li>
           <li><a class="nav-link scrollto" href="#about">Assignment</a></li>
             <ul>
@@ -120,7 +120,7 @@
             </p>
           </div>
         </div>
-        <div class="column" onclick="index()">
+        <div class="column" onClick="index()">
           <div class="card">
             <div class="icon-wrapper">
               <i class="fa-solid fa-brackets-curly">3</i>
@@ -199,7 +199,7 @@
   <script src="static/assets/js/main.js"></script>
   <script>
     function index() {
-        window.open("http://127.0.0.1:8000/exp1");
+        window.open("{% url 'exp1' %}");
     }
   </script>
 
