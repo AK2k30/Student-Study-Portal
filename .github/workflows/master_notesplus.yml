@@ -45,7 +45,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ https://notesplus.azurewebsites.net/ }}
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
       - name: Download artifact from build job
@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'notesplus'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_556EC661352A4AFAAA95D7AB2F91CCB4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5671162009A14607AD44BC839A8111DF }}
