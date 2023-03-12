@@ -1,0 +1,87 @@
+.select-default.error ~ .select2-container > * .select2-selection--single {
+  border: 0.0625rem solid red !important;
+  border-radius: 0.25rem;
+}
+
+.placeholder-icon > * .select2-selection__placeholder {
+  padding-left: 2rem;
+  position: relative;
+}
+
+.placeholder-icon > * .select2-selection__placeholder::before {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  left: 0;
+  filter: invert(32%) sepia(0%) saturate(1356%) hue-rotate(268deg) brightness(107%) contrast(85%);
+}
+
+.placeholder-icon.search > * .select2-selection__placeholder::before {
+  background-image: url("../../assets/img/search.svg");
+}
+
+.select2-search--dropdown {
+  display: none !important;
+}
+
+.select2-selection--single[aria-expanded=true] {
+  border: 0.0625rem solid #F48220 !important;
+  border-radius: 0.25rem !important;
+}
+
+.select2-selection--single {
+  height: 2.5rem !important;
+  display: flex !important;
+  align-items: center;
+}
+
+.select2-selection__arrow {
+  top: 6px !important;
+  right: 0.75rem !important;
+}
+
+.select2-selection__rendered {
+  padding-left: 0.75rem !important;
+}
+
+.select2-dropdown {
+  margin-top: 0.25rem;
+  border-radius: 0.25rem !important;
+  box-shadow: 0 .25rem 6px rgba(0, 0, 0, 0.021), 0 .5rem 1rem rgba(0, 0, 0, 0.08);
+  border: 0.0625rem solid #EAE9E9 !important;
+}
+
+.select2-results__options {
+  border-radius: 0.5rem;
+  max-height: 16rem !important;
+  padding-top: .5rem !important;
+  margin: .5rem .25rem .5rem 0 !important;
+}
+
+.select2-results__options::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5rem;
+}
+
+.select2-results__options::-webkit-scrollbar-thumb {
+  background-color: #D8D6D5;
+  border-radius: 0.25rem;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #FDFCFC !important;
+  color: #2F2E2D !important;
+}
+
+.select2-results__option--selectable {
+  height: 2.5rem !important;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: #FAFAFA !important;
+}
+

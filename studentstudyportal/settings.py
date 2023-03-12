@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-t*j%5ct68cou#7=l61fkdz=x7dgo9sikg3c20jq%lc!gn!k!+5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['notesplus.azurewebsites.net']
+ALLOWED_HOSTS = ['notesplus.azurewebsites.net','127.0.0.1']
 
 
 # Application definition
@@ -130,6 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/"static"]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
