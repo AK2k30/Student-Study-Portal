@@ -133,6 +133,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/"static"]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_STORAGE = 'django_azure_storage.AzureStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
@@ -143,5 +145,10 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'assg_page'
 LOGIN_URL = 'login'
+
+AZURE_ACCOUNT_NAME = 'notesplusstorage'
+AZURE_ACCOUNT_KEY = 'ReX2oIpu7uoz+wAkcVN3R11ucK0Q0aHvjxjVSfiytqBaSUyIh+lD5OyJ8dD3rq8y4Pr6AzLi6nkD+AStdnSE8w=='
+AZURE_CONTAINER = 'notesplusss'
+
 
 
