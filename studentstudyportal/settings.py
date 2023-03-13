@@ -152,7 +152,7 @@ AZURE_ACCOUNT_NAME = 'notesplusstorage'
 AZURE_ACCOUNT_KEY = 'ReX2oIpu7uoz+wAkcVN3R11ucK0Q0aHvjxjVSfiytqBaSUyIh+lD5OyJ8dD3rq8y4Pr6AzLi6nkD+AStdnSE8w=='
 AZURE_CONTAINER = 'notesplusss'
 
-# CSRF_TRUSTED_ORIGINS = ["https://*.notesplus.azurewebsites.net/"]
+CSRF_TRUSTED_ORIGINS = ["https://*.notesplus.azurewebsites.net/"]
 CORS_ALLOW_ALL_ORIGINS= True
 
 
