@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['notesplus.azurewebsites.net','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,7 +47,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -154,9 +152,4 @@ AZURE_CONTAINER = 'notesplusss'
 
 CSRF_TRUSTED_ORIGINS = ["https://notesplus.azurewebsites.net/", "https://notesplus.azurewebsites.net/"]
 
-CORS_ALLOWED_ORIGINS = [
-"https://notesplus.azurewebsites.net",
-"https://api.notesplus.azurewebsites.net",
-"http://localhost:8000",
-"http://127.0.0.1:8000"
-]
+
