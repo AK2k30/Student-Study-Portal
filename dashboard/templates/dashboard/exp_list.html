@@ -12,8 +12,8 @@
             <th>Cover</th>
             <th>Title</th>
             <th>Owner</th>
-            <th>Download</th>
-            <th>Delete</th>
+            <th>View</th>
+            {% comment %} <th>Delete</th> {% endcomment %}
         </tr>
     </thead>
     <tbody>
@@ -28,14 +28,14 @@
             <td>{{ exp.title }}</td>
             <td>{{ exp.owner }}</td>
             <td>
-                <a href="{{ exp.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">Download</a>
+                <a href="{{ exp.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">View</a>
             </td>
-            <td>
+            {% comment %} <td>
                 <form method = "post" action = "{% url 'delete_exp' exp.pk %}">
                     {% csrf_token %}
                     <button type = "submit" class = "btn btn-danger btn-sm">Delete</button>
                 </form>
-            </td>
+            </td> {% endcomment %}
         </tr>
         {% endfor %}
     </tbody>

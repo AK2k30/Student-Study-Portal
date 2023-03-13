@@ -46,7 +46,7 @@
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="http://127.0.0.1:8000/" class="logo d-flex align-items-center">
+      <a href="{% url 'homepage' %}" class="logo d-flex align-items-center">
         <img src="static/assets/img/logo.png" alt="">
         <span>NotesPlus</span>
       </a>
@@ -59,7 +59,7 @@
           <li><a class="nav-link scrollto active" href="http://127.0.0.1:8000/">Home</a></li>
           <li><a class="nav-link scrollto" href="http://127.0.0.1:8000/assg_page">About</a></li>
           <li><a class="nav-link scrollto" href="#youronassignment">Assignment</a></li>
-          <li><a class="nav-link scrollto" href="http://127.0.0.1:8000/exp/">Experiment</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'exp1' %}">Experiment</a></li>
           <li class="dropdown"><a href="#"><span>Branch</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="#"><span>Data Science</span> <i class="bi bi-chevron-right"></i></a>
@@ -174,7 +174,7 @@
               <img src="static/assets/img/logo.png" alt="">
               <span>NotesPlus</span>
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>We provide solution of all assignments, experiments, question bank and notes of all branch and year.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
